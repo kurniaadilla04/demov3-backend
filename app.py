@@ -52,4 +52,5 @@ def predict():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # gunakan PORT dari Railway
     app.run(host='0.0.0.0', port=port)
+    #app.run(host='http://10.250.11.195', port=8080)
 
