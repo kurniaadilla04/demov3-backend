@@ -15,13 +15,13 @@ if not os.path.exists(base_dir):
 
 
 run = Flask(__name__)
-CORS(app)
+CORS(run)
 
 # Load model
 classifier = TeaLeafClassifier()
 classifier.load_model("knn_model.pkl")
 
-@app.route('/api/predict', methods=['POST'])
+@run.route('/api/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
         return jsonify({'status': 'error', 'message': 'No image uploaded'}), 400
