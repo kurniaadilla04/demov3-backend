@@ -14,7 +14,7 @@ if not os.path.exists(base_dir):
     raise FileNotFoundError(f"Folder '{base_dir}' tidak ditemukan.")
 
 
-app = Flask(__name__)
+run = Flask(__name__)
 CORS(app)
 
 # Load model
